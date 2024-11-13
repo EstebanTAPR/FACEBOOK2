@@ -1,0 +1,99 @@
+/* Estilos para el formulario de registro */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.right-section {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+}
+
+.right-section h2 {
+    color: #d32f2f;
+    font-size: 24px;
+}
+
+.right-section p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-form input, .register-form select {
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.name-fields, .date-fields, .gender-fields {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.gender-fields {
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.gender-fields label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px;
+}
+
+.register-button {
+    background-color: #d32f2f;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-link {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.login-link a {
+    color: #d32f2f;
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

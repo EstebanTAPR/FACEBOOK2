@@ -1,0 +1,141 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #18191a;
+    color: #e4e6eb;
+    margin: 0;
+}
+
+.profile-header {
+    position: relative;
+    width: 100%;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #242526;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 4px solid #18191a;
+}
+
+.profile-details h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    color: #b0b3b8;
+}
+
+.profile-actions button {
+    margin-left: auto;
+    padding: 8px 16px;
+    background-color: #2d88ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.profile-nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #242526;
+    padding: 10px 0;
+    list-style: none;
+    margin: 0;
+}
+
+.profile-nav ul li {
+    margin: 0 15px;
+}
+
+.profile-nav ul li a {
+    color: #e4e6eb;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.profile-nav ul li a:hover {
+    color: #2d88ff;
+}
+
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+.profile-sidebar {
+    width: 30%;
+    background-color: #242526;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.profile-sidebar h3 {
+    margin-top: 0;
+}
+
+.profile-sidebar p {
+    margin: 8px 0;
+    color: #b0b3b8;
+}
+
+.profile-posts {
+    width: 70%;
+}
+
+.create-post {
+    background-color: #242526;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.create-post textarea {
+    width: 100%;
+    background-color: #3a3b3c;
+    border: none;
+    border-radius: 8px;
+    color: #e4e6eb;
+    padding: 10px;
+    resize: none;
+}
+
+.create-post button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2d88ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post {
+    background-color: #242526;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.post h4 {
+    margin: 0;
+}
