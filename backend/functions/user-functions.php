@@ -1,5 +1,6 @@
 <?php
 include_once '../config/database.php';
+include_once __DIR__ . '/../config/database.php';
 
 
 
@@ -55,6 +56,41 @@ function loginUser($email, $password) {
     }
 
     return false;
+}
+
+function updateUserDetails($conn, $user_id, $data) {
+    // Actualizar detalles del perfil
+    $stmt = $conn->prepare("UPDATE users SET bio = :bio, education = :education, city = :city, hometown = :hometown WHERE id = :user_id");
+    $stmt->bindParam(':bio', $data['bio']);
+    $stmt->bindParam(':education', $data['education']);
+    $stmt->bindParam(':city', $data['city']);
+    $stmt->bindParam(':hometown', $data['hometown']);
+    $stmt->bindParam(':user_id', $user_id);
+
+    if ($stmt->execute()) {
+        // Si se envían archivos de imagen, llámalos aquí para manejar la carga
+        if ($data['profile_picture']) {
+            uploadImage($conn, $user_id, $data['profile_picture'], 'profile_picture');
+        }
+        if ($data['cover_picture']) {
+            uploadImage($conn, $user_id, $data['cover_picture'], 'cover_picture');
+        }
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function uploadImage($conn, $user_id, $file, $type) {
+    $target_dir = "../frontend/images/";
+    $target_file = $target_dir . basename($file["name"]);
+    move_uploaded_file($file["tmp_name"], $target_file);
+
+    $column = $type === 'profile_picture' ? 'profile_picture' : 'cover_picture';
+    $stmt = $conn->prepare("UPDATE users SET $column = :image WHERE id = :user_id");
+    $stmt->bindParam(':image', $target_file);
+    $stmt->bindParam(':user_id', $user_id);
+    $stmt->execute();
 }
 
 
