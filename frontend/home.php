@@ -42,8 +42,13 @@
             <div class="create-post">
                 <form action="create-post.php" method="POST" enctype="multipart/form-data">
                     <textarea name="post_content" placeholder="¿Qué estás pensando?"></textarea>
-                    <input type="file" name="post_image" accept="image/*">
-                    <button type="submit">Publicar</button>
+                   
+                    <div class="custom-file-container">
+                        <label for="file-upload" class="custom-file-label">Seleccionar archivo</label>
+                        <input id="file-upload" type="file" />
+                        <button type="submit">Publicar</button>
+                    </div>
+                  
                 </form>
             </div>
 

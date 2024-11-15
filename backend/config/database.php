@@ -2,10 +2,10 @@
 
 
 class Database {
-    private $host = "localhost";       
+    private $host = "127.0.0.1";       
     private $db_name = "red_social";      
     private $username = "root";    
-    private $password = "12345";  
+    private $password = "";  
     public $conn;
 
    
