@@ -75,14 +75,17 @@ $cover_picture = $user['cover_picture'] ?: 'images/default-cover.jpg';
         </div>
         <div class="profile-info">
             <h1><?php echo htmlspecialchars($nombre); ?></h1>
-            <p><?php echo $amigos; ?> amigos</p>
+            
             <div class="profile-actions">
                 <button>Agregar a Historia</button>
                 <a href="edit-profile.php">
                     <button>Editar Perfil</button>
                 </a>
             </div>
+            
+            
         </div>
+        <div class="profile-info-amigos"> <?php echo $amigos; ?> amigos </div>
     </header>
 
     <!-- Menú de Navegación del Perfil -->
@@ -110,12 +113,16 @@ $cover_picture = $user['cover_picture'] ?: 'images/default-cover.jpg';
 
         <!-- Sección de Publicaciones -->
         <section class="profile-posts">
-            <div class="create-post">
+        <div class="create-post">
                 <form action="create-post.php" method="POST" enctype="multipart/form-data">
                     <textarea name="post_content" placeholder="¿Qué estás pensando?"></textarea>
-                    <input type="file" name="post_image" accept="image/*" id="postImageInput">
-                    <img id="imagePreview" src="#" alt="Previsualización de Imagen" style="display: none; max-width: 100%; margin-top: 10px;">
-                    <button type="submit">Publicar</button>
+                   
+                    <div class="custom-file-container">
+                        <label for="file-upload" class="custom-file-label">Seleccionar archivo</label>
+                        <input id="file-upload" type="file" />
+                        <button type="submit">Publicar</button>
+                    </div>
+                  
                 </form>
             </div>
 
